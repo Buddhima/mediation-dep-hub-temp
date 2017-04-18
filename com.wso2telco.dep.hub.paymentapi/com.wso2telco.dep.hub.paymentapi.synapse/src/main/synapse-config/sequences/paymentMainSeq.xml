@@ -3,6 +3,9 @@
     <call-template target="com.wso2telco.dep.common.loggingExtension.Template">
         <with-param name="direction" value="REQUESTIN"/>
     </call-template>
+    <call-template target="com.wso2telco.dep.common.request.publishingExtension.Template">
+        <with-param name="direction" value="REQUESTIN"/>
+    </call-template>
     <property expression="json-eval($.amountTransaction.clientCorrelator)"
               name="originalClientCorrelator" scope="default" type="STRING"/>
     <sequence key="apiPropertySeq"/>
